@@ -136,8 +136,20 @@
 <span class="material-symbols-outlined text-lg">chat</span>
                     Pedido WhatsApp
                 </a>
+<button id="mobile-menu-btn" class="md:hidden material-symbols-outlined text-on-surface-variant p-2 hover:bg-primary/10 rounded-full transition-all duration-300" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">menu</button>
 </div>
 </nav>
+<div id="mobile-menu" class="hidden md:hidden flex-col px-6 pb-6 max-w-7xl mx-auto">
+<a class="block py-3 font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+<a class="block py-3 font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="catalogo.html">Categorías</a>
+<a class="block py-3 font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="horarios.html">Horarios</a>
+<a class="block py-3 font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="ubicacion.html">Ubicación</a>
+<a class="block py-3 font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+<a class="flex items-center justify-center gap-2 px-4 py-3 mt-2 bg-primary/10 border border-primary/20 text-primary rounded-full font-semibold hover:bg-primary/20 transition-all active:scale-95" href="https://wa.me/#">
+<span class="material-symbols-outlined text-lg">chat</span>
+                    Pedido WhatsApp
+                </a>
+</div>
 </header>
 <main class="pt-24 pb-12 px-6">
 <!-- Hero Section -->
@@ -311,4 +323,25 @@
             });
         });
     </script>
+
+<script>
+(function () {
+    var btn = document.getElementById('mobile-menu-btn');
+    var menu = document.getElementById('mobile-menu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function () {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        btn.textContent = isOpen ? 'menu' : 'close';
+        btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+    menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            menu.classList.add('hidden');
+            btn.textContent = 'menu';
+            btn.setAttribute('aria-expanded', 'false');
+        });
+    });
+})();
+</script>
 </body></html>
