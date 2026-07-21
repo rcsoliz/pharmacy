@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catálogo | Farmacia Illimani</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#c8eaff",
+                    "primary-fixed-dim": "#7dd3fc",
+                    "on-secondary-fixed": "#0d1f2b",
+                    "surface-container-high": "#1a2438",
+                    "surface-tint": "#7dd3fc",
+                    "on-secondary": "#001f2e",
+                    "primary-fixed": "#c8eaff",
+                    "surface-container-low": "#111828",
+                    "inverse-surface": "#e0e8f0",
+                    "inverse-primary": "#0a4c6e",
+                    "inverse-on-surface": "#0a0e1a",
+                    "on-surface-variant": "#a0b4c4",
+                    "tertiary-container": "#3d2060",
+                    "surface-container-highest": "#202c42",
+                    "tertiary": "#c8a0f0",
+                    "secondary": "#88b4cc",
+                    "primary-container": "#0e4d6e",
+                    "secondary-fixed": "#c0d8e8",
+                    "on-surface": "#e0e8f0",
+                    "on-primary-fixed-variant": "#004d73",
+                    "on-error": "#1a0000",
+                    "on-background": "#e0e8f0",
+                    "tertiary-fixed-dim": "#c8a0f0",
+                    "outline": "#4a6070",
+                    "on-secondary-fixed-variant": "#2a4a5e",
+                    "error-container": "#3d1414",
+                    "on-tertiary": "#1a002e",
+                    "surface-variant": "#1a2438",
+                    "surface-container": "#141c2e",
+                    "on-primary": "#001f2e",
+                    "surface-container-lowest": "#0a0e1a",
+                    "error": "#ff6b6b",
+                    "on-secondary-container": "#c0d8e8",
+                    "outline-variant": "#2a3a48",
+                    "tertiary-fixed": "#e8d0ff",
+                    "secondary-container": "#1a3a4e",
+                    "primary": "#7dd3fc",
+                    "secondary-fixed-dim": "#88b4cc",
+                    "on-tertiary-fixed-variant": "#4d2a73",
+                    "on-tertiary-container": "#e8d0ff",
+                    "on-primary-fixed": "#001f2e",
+                    "surface": "#0f1524",
+                    "on-tertiary-fixed": "#1a002e",
+                    "on-error-container": "#ffb3b3",
+                    "surface-dim": "#0f1524",
+                    "surface-bright": "#1a2438",
+                    "background": "#0a0e1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "display": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0a0e1a;
+            color: #e0e8f0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(15, 21, 36, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(125, 211, 252, 0.1);
+        }
+
+        .glass-nav {
+            background: rgba(10, 14, 26, 0.6);
+            backdrop-filter: blur(12px);
+        }
+
+        .ice-glow {
+            box-shadow: 0 0 30px rgba(125, 211, 252, 0.05);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .category-pill.active {
+            background: rgba(125, 211, 252, 0.15);
+            border-color: rgba(125, 211, 252, 0.4);
+            color: #7dd3fc;
+        }
+
+        /* Custom scrollbar for Glacier look */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0e1a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(125, 211, 252, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-lg border-b border-primary/10 shadow-[0_0_30px_rgba(125,211,252,0.05)]">
+<nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+<a class="text-xl font-headline font-semibold text-primary dark:text-primary-fixed-dim" href="index.html">Farmacia Illimani</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+<a class="font-headline font-semibold tracking-tight text-primary border-b-2 border-primary pb-1" href="catalogo.html">Categorías</a>
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="horarios.html">Horarios</a>
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="ubicacion.html">Ubicación</a>
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-primary/10 rounded-full transition-all duration-300">search</button>
+<a class="hidden md:flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 text-primary rounded-full font-semibold hover:bg-primary/20 transition-all active:scale-95" href="https://wa.me/#">
+<span class="material-symbols-outlined text-lg">chat</span>
+                    Pedido WhatsApp
+                </a>
+</div>
+</nav>
+</header>
+<main class="pt-28 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Hero / Header Section -->
+<section class="mb-12 relative overflow-hidden rounded-xl p-8 md:p-16 glass-card ice-glow">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-primary/5 blur-[100px] rounded-full"></div>
+<div class="relative z-10 max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight mb-4">
+                    Catálogo de <span class="text-primary">Productos</span>
+</h1>
+<p class="text-lg text-on-surface-variant font-body leading-relaxed mb-8">
+                    Explora nuestra selección premium de farmacia en Sopocachi. Elige lo que necesitas y realiza tu pedido directamente a través de WhatsApp para una atención rápida y personalizada.
+                </p>
+<div class="flex flex-wrap gap-4">
+<div class="flex items-center gap-2 text-sm text-primary bg-primary/5 px-3 py-1 rounded-full border border-primary/10">
+<span class="material-symbols-outlined text-sm">verified</span>
+                        Productos Certificados
+                    </div>
+<div class="flex items-center gap-2 text-sm text-tertiary bg-tertiary/5 px-3 py-1 rounded-full border border-tertiary/10">
+<span class="material-symbols-outlined text-sm">local_shipping</span>
+                        Entrega en Sopocachi
+                    </div>
+</div>
+</div>
+</section>
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Sidebar Filters -->
+<aside class="lg:w-64 flex-shrink-0">
+<div class="sticky top-28 space-y-6">
+<div>
+<h3 class="text-sm font-bold uppercase tracking-wider text-primary-fixed-dim mb-4 px-2">Categorías</h3>
+<div class="flex flex-col gap-2">
+<button class="category-pill active flex items-center justify-between px-4 py-3 rounded-lg border border-transparent transition-all hover:bg-primary/10 text-left">
+<span class="flex items-center gap-3">
+<span class="material-symbols-outlined">pill</span>
+                                    Medicamentos
+                                </span>
+<span class="text-xs opacity-50">240</span>
+</button>
+<button class="category-pill flex items-center justify-between px-4 py-3 rounded-lg border border-transparent transition-all hover:bg-primary/10 text-on-surface-variant text-left">
+<span class="flex items-center gap-3">
+<span class="material-symbols-outlined">face_6</span>
+                                    Cuidado Personal
+                                </span>
+<span class="text-xs opacity-50">112</span>
+</button>
+<button class="category-pill flex items-center justify-between px-4 py-3 rounded-lg border border-transparent transition-all hover:bg-primary/10 text-on-surface-variant text-left">
+<span class="flex items-center gap-3">
+<span class="material-symbols-outlined">auto_awesome</span>
+                                    Dermocosmética
+                                </span>
+<span class="text-xs opacity-50">85</span>
+</button>
+<button class="category-pill flex items-center justify-between px-4 py-3 rounded-lg border border-transparent transition-all hover:bg-primary/10 text-on-surface-variant text-left">
+<span class="flex items-center gap-3">
+<span class="material-symbols-outlined">child_care</span>
+                                    Bebé y Mamá
+                                </span>
+<span class="text-xs opacity-50">42</span>
+</button>
+</div>
+</div>
+<div class="glass-card p-4 rounded-xl space-y-4">
+<h4 class="text-sm font-bold text-on-surface">¿No encuentras lo que buscas?</h4>
+<p class="text-xs text-on-surface-variant">Consulta directamente disponibilidad de fórmulas magistrales o medicamentos específicos.</p>
+<a class="block text-center text-xs font-bold text-primary border border-primary/20 py-2 rounded-lg hover:bg-primary/10 transition-colors" href="#">Enviar Receta</a>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<div class="flex-grow">
+<div class="flex items-center justify-between mb-8">
+<p class="text-on-surface-variant text-sm">Mostrando <span class="text-on-surface font-semibold">12</span> de <span class="text-on-surface font-semibold">240</span> Medicamentos</p>
+<div class="flex gap-2">
+<button class="p-2 glass-card rounded-lg hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<select class="bg-surface-container-low border-primary/10 text-on-surface-variant rounded-lg text-sm focus:ring-primary focus:border-primary">
+<option>Recomendados</option>
+<option>Nombre A-Z</option>
+<option>Más buscados</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Product Card 1 -->
+<div class="glass-card rounded-xl p-4 flex flex-col group transition-all duration-300 hover:-translate-y-1 hover:border-primary/30">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden mb-4 bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A clean professional studio shot of a white pharmaceutical box with ice-blue accents, placed on a reflective dark glass surface with soft atmospheric blue lighting in the background, matching the Glacier dark mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_4DO6BplQeC2NUjThHRGtHlkZlYAEwjn62J9tzP7J6B3NTQGctAabs2X6me0hl8ZVGj19kPRzF99agJrlsp5WVzL4KOkh24JXfc2x0KDjyqzu_C70PXryJIlRMNRtNI55_ZUrzxUdteruF6e1k0RO8V10zfdhVGTF2ndMJhSukgkRBrZLbWrm--Zn15vkUAH9ZQkiqhZBZFj7P9HTfgf3dkXMUFr7sySet4zw0DFnfPn-Z2Im_Avx0A"/>
+<div class="absolute top-2 right-2 px-2 py-1 bg-primary/20 backdrop-blur-md border border-primary/30 rounded-md text-[10px] font-bold text-primary-fixed-dim uppercase tracking-wider">Stock Disponible</div>
+</div>
+<h3 class="text-on-surface font-bold text-lg mb-1">Amoxicilina 500mg</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-6 font-body">Antibiótico de amplio espectro para el tratamiento de infecciones bacterianas comunes. Venta bajo receta.</p>
+<div class="mt-auto flex flex-col gap-2">
+<div class="text-xs text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">description</span>
+                                Requiere receta médica
+                            </div>
+<button class="w-full py-3 bg-primary/10 border border-primary/20 text-primary rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-xl">chat</span>
+                                Consultar por WhatsApp
+                            </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="glass-card rounded-xl p-4 flex flex-col group transition-all duration-300 hover:-translate-y-1 hover:border-primary/30">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden mb-4 bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close up shot of a premium serum bottle from a dermocosmetic line, translucent frosted glass bottle, set against a dark moody background with subtle neon blue light streaks and ice-like reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmttvLIr-lBA6Q3F6EQXYEmf5EuDquS0tq9KPzHgPmILeaa5KFc_1BXV_yP-waS7bvHF5tSLNirfiFs2B0kmi7HntbdjQhFr17laOEbR7DrxH8sAAkW2U-iMeuGlTPyBRRYIsEQW-cJHDDUJverJdv03OX5NHdAAtBZUbDQE-X-Id8dBOjKEeRtZbk5vi4Lh7W9KCeeeYOttve1O8PjyBjllTXBd3AFyzMYQDbEJua0NFKxcYe0ONn1g"/>
+<div class="absolute top-2 right-2 px-2 py-1 bg-tertiary/20 backdrop-blur-md border border-tertiary/30 rounded-md text-[10px] font-bold text-tertiary uppercase tracking-wider">Premium</div>
+</div>
+<h3 class="text-on-surface font-bold text-lg mb-1">Serum Vitamina C+</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-6 font-body">Tratamiento antioxidante avanzado para luminosidad y prevención del envejecimiento prematuro. 30ml.</p>
+<div class="mt-auto flex flex-col gap-2">
+<div class="text-xs text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">favorite</span>
+                                Recomendación Farmacéutica
+                            </div>
+<button class="w-full py-3 bg-primary/10 border border-primary/20 text-primary rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-xl">chat</span>
+                                Consultar por WhatsApp
+                            </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="glass-card rounded-xl p-4 flex flex-col group transition-all duration-300 hover:-translate-y-1 hover:border-primary/30">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden mb-4 bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A pack of specialized infant care products, baby shampoo and lotion with gentle packaging design, staged on a soft textured surface with atmospheric lighting in tones of deep navy and soft lavender." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrO6eQaI8EN2WPsrkA81a9DeUO4gIEjFjdCd8tT-5mCkB9F3pVH46LU8RgVsUEJFW0_k6_SjHcbIIryLa6qIb2tKpIs3lt7hJ4xordyO09Vyode_swHZTrz1zlb797sfcgPUOWAQp0VtdOlLOtqAkZY7CWnyQUJqLKzMtRjDv9TCAqHYCq7FtdpdyuRCIN9ojztiTkej2PNQH2wfbuzaqZIvgoW4gUHOTdBFvhWQ5lBGX00X08qaPyEg"/>
+</div>
+<h3 class="text-on-surface font-bold text-lg mb-1">Kit Bebé Suave</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-6 font-body">Pack esencial de cuidado para pieles sensibles, incluye shampoo sin lágrimas y loción hidratante.</p>
+<div class="mt-auto flex flex-col gap-2">
+<div class="text-xs text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">auto_delete</span>
+                                Hipoalergénico
+                            </div>
+<button class="w-full py-3 bg-primary/10 border border-primary/20 text-primary rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-xl">chat</span>
+                                Consultar por WhatsApp
+                            </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="glass-card rounded-xl p-4 flex flex-col group transition-all duration-300 hover:-translate-y-1 hover:border-primary/30">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden mb-4 bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Pharmaceutical box for vitamins and minerals, professional branding, isolated in a high-tech laboratory environment with blue and purple bokeh lighting, cinematic product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-3pjvnrHvkD8CGe6mZcy4oYeV8aNHfO8DgUuw5QvV33sUYX_AmP40BDoukL2BAm35XeSNYOFgcASqOCjrHJpaNnsDVvyIYMRN2MlSgZJoueTuM45V84PYk2S5tuhL97dO1wOsFgOB9EdX-g_M65sgidn-lJSTvV6QLnVe_DlazAkzrZR686Jncy4kqD3CwQtZ61X0Aej9PMd-SHMWnyCsULsWw9p_JmdZCY9QtSP7vpTpJvgM_7OYQg"/>
+</div>
+<h3 class="text-on-surface font-bold text-lg mb-1">Complejo B Forte</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-6 font-body">Suplemento multivitamínico para el refuerzo del sistema nervioso y metabolismo energético. 30 tabletas.</p>
+<div class="mt-auto flex flex-col gap-2">
+<div class="text-xs text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">bolt</span>
+                                Máxima Energía
+                            </div>
+<button class="w-full py-3 bg-primary/10 border border-primary/20 text-primary rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-xl">chat</span>
+                                Consultar por WhatsApp
+                            </button>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="glass-card rounded-xl p-4 flex flex-col group transition-all duration-300 hover:-translate-y-1 hover:border-primary/30">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden mb-4 bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="High quality medical thermometer and pulse oximeter device, sleek modern digital design, professional healthcare equipment photography on a dark translucent background with ice-blue highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrbslnLX2LIX2NNH-2DSWPvcIIpGwl0RxTATwKjm5sMYtmpdvKQ6Ogt9uZFlb5q-y6-Ws6PEDaUsqdVkY6ujy2Q_ZIlSU5_1pWxVuXF8NLqSLYQ8wl1qymU2yaRbWAXYfcBlJ8pFSaNd4zDrTsWCoEfndxAVRJ1WLIDRWxeryQrZoc3n-FS-R_P09Qi2z8esw0NgSC2RVAfqaAbENYxttR2oCyzypp381drclBObW59qjRB_3rChSs0A"/>
+<div class="absolute top-2 right-2 px-2 py-1 bg-error/20 backdrop-blur-md border border-error/30 rounded-md text-[10px] font-bold text-error uppercase tracking-wider">Últimas Unidades</div>
+</div>
+<h3 class="text-on-surface font-bold text-lg mb-1">Termómetro Digital Pro</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-6 font-body">Termómetro de alta precisión con lectura infrarroja en 1 segundo. Ideal para toda la familia.</p>
+<div class="mt-auto flex flex-col gap-2">
+<div class="text-xs text-on-surface-variant font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">settings</span>
+                                1 Año de Garantía
+                            </div>
+<button class="w-full py-3 bg-primary/10 border border-primary/20 text-primary rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-xl">chat</span>
+                                Consultar por WhatsApp
+                            </button>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="glass-card rounded-xl p-4 flex flex-col group transition-all duration-300 hover:-translate-y-1 hover:border-primary/30">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden mb-4 bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Organic personal care items, herbal shampoo and natural soap, minimalist eco-friendly packaging, staged in a clean spa-like setting with dark atmospheric lighting and ice-blue accent glows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB99urYztyn0WxWuTUbD4zWdWzS0ZKkFcpdBEn9VeSW80ieXgLcygrV6tG1a0FbcgvV0h7y-XV3Un4wY-UONz7JTGakAyrA67rjPvYLodJC1KdiHA7GTW8a67bVPaFK113OqJzpkpE0gG_7cM0ZZugoyIstzAZngtMvTcYcdh6MifJpPrL7mIhyvp_Tu0QWp7QJRssyMiU20oAdTpuy9j9WpSlRJZarYWTRbHQmwtDZ7rLCLZ3fr_A6Dw"/>
+</div>
+<h3 class="text-on-surface font-bold text-lg mb-1">Pack Cuidado Herbal</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 mb-6 font-body">Selección de productos de higiene personal con extractos naturales del Altiplano. Producción local.</p>
+<div class="mt-auto flex flex-col gap-2">
+<div class="text-xs text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">eco</span>
+                                100% Natural
+                            </div>
+<button class="w-full py-3 bg-primary/10 border border-primary/20 text-primary rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-primary text-on-primary transition-all duration-300">
+<span class="material-symbols-outlined text-xl">chat</span>
+                                Consultar por WhatsApp
+                            </button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex justify-center items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg glass-card text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg glass-card text-on-surface-variant hover:bg-primary/10 transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg glass-card text-on-surface-variant hover:bg-primary/10 transition-colors">3</button>
+<span class="w-10 h-10 flex items-center justify-center text-on-surface-variant">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg glass-card text-on-surface-variant hover:bg-primary/10 transition-colors">20</button>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg glass-card text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container-low/80 backdrop-blur-xl border-t border-primary/10 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 gap-6 w-full max-w-7xl mx-auto">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="text-lg font-headline font-bold text-primary">Farmacia Illimani</span>
+<p class="font-body text-sm text-on-surface-variant text-center md:text-left max-w-xs">© 2024 Farmacia Illimani. Excelencia Farmacéutica en el corazón de Sopocachi.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body text-sm text-on-surface-variant hover:text-primary hover:underline decoration-primary/30 transition-opacity duration-200" href="#">Contacto</a>
+<a class="font-body text-sm text-on-surface-variant hover:text-primary hover:underline decoration-primary/30 transition-opacity duration-200" href="terminos.html">Aviso Legal</a>
+<a class="font-body text-sm text-on-surface-variant hover:text-primary hover:underline decoration-primary/30 transition-opacity duration-200" href="privacidad.html">Privacidad</a>
+<a class="font-body text-sm text-on-surface-variant hover:text-primary hover:underline decoration-primary/30 transition-opacity duration-200" href="redes_sociales.html">Redes Sociales</a>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-primary/10 transition-all">
+<span class="material-symbols-outlined text-primary">face_nod</span>
+</button>
+<button class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-primary/10 transition-all">
+<span class="material-symbols-outlined text-primary">share</span>
+</button>
+</div>
+</div>
+</footer>
+<!-- Floating WhatsApp Action -->
+<div class="fixed bottom-6 right-6 z-50">
+<a class="flex items-center justify-center w-14 h-14 bg-primary text-on-primary rounded-full shadow-[0_0_20px_rgba(125,211,252,0.4)] hover:scale-110 active:scale-95 transition-all duration-300 group" href="https://wa.me/#">
+<span class="material-symbols-outlined text-3xl">chat</span>
+<span class="absolute right-full mr-4 bg-primary px-3 py-1 rounded-lg text-sm font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">¿Necesitas ayuda?</span>
+</a>
+</div>
+<script>
+        // Simple micro-interaction for category switching
+        const categories = document.querySelectorAll('.category-pill');
+        categories.forEach(cat => {
+            cat.addEventListener('click', () => {
+                categories.forEach(c => c.classList.remove('active', 'text-primary'));
+                categories.forEach(c => c.classList.add('text-on-surface-variant'));
+                cat.classList.add('active');
+                cat.classList.remove('text-on-surface-variant');
+            });
+        });
+
+        // Hover animation logic for cards can be handled via CSS as defined above.
+    </script>
+</body></html>

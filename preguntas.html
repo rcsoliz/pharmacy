@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Preguntas Frecuentes | Farmacia Illimani</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#e8d0ff",
+                    "error": "#ff6b6b",
+                    "on-surface-variant": "#a0b4c4",
+                    "on-primary-fixed": "#001f2e",
+                    "surface-bright": "#1a2438",
+                    "on-tertiary-fixed-variant": "#4d2a73",
+                    "primary": "#7dd3fc",
+                    "on-tertiary": "#1a002e",
+                    "on-primary-fixed-variant": "#004d73",
+                    "surface-container": "#141c2e",
+                    "on-secondary-fixed": "#0d1f2b",
+                    "on-background": "#e0e8f0",
+                    "inverse-surface": "#e0e8f0",
+                    "secondary-fixed": "#c0d8e8",
+                    "on-error": "#1a0000",
+                    "outline-variant": "#2a3a48",
+                    "surface-container-low": "#111828",
+                    "on-secondary-fixed-variant": "#2a4a5e",
+                    "tertiary-fixed": "#e8d0ff",
+                    "tertiary-container": "#3d2060",
+                    "secondary-container": "#1a3a4e",
+                    "surface": "#0f1524",
+                    "primary-fixed": "#c8eaff",
+                    "surface-tint": "#7dd3fc",
+                    "inverse-on-surface": "#0a0e1a",
+                    "secondary-fixed-dim": "#88b4cc",
+                    "tertiary-fixed-dim": "#c8a0f0",
+                    "on-secondary": "#001f2e",
+                    "primary-fixed-dim": "#7dd3fc",
+                    "surface-container-highest": "#202c42",
+                    "secondary": "#88b4cc",
+                    "on-primary-container": "#c8eaff",
+                    "on-error-container": "#ffb3b3",
+                    "tertiary": "#c8a0f0",
+                    "error-container": "#3d1414",
+                    "primary-container": "#0e4d6e",
+                    "surface-dim": "#0f1524",
+                    "on-tertiary-fixed": "#1a002e",
+                    "surface-variant": "#1a2438",
+                    "inverse-primary": "#0a4c6e",
+                    "surface-container-high": "#1a2438",
+                    "on-surface": "#e0e8f0",
+                    "background": "#0a0e1a",
+                    "surface-container-lowest": "#0a0e1a",
+                    "outline": "#4a6070",
+                    "on-secondary-container": "#c0d8e8",
+                    "on-primary": "#001f2e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "display": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(15, 21, 36, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(125, 211, 252, 0.1);
+        }
+        .glass-panel-elevated {
+            background: rgba(15, 21, 36, 0.75);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(125, 211, 252, 0.15);
+        }
+        .faq-accordion[open] .faq-icon {
+            transform: rotate(180deg);
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 selection:text-primary min-h-screen">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-lg border-b border-primary/10 shadow-[0_0_30px_rgba(125,211,252,0.05)]">
+<nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+<a class="text-xl font-headline font-semibold text-primary dark:text-primary-fixed-dim" href="index.html">Farmacia Illimani</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="catalogo.html">Categorías</a>
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="horarios.html">Horarios</a>
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="ubicacion.html">Ubicación</a>
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-primary/10 rounded-full transition-all duration-300">search</button>
+<a class="hidden md:flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 text-primary rounded-full font-semibold hover:bg-primary/20 transition-all active:scale-95" href="https://wa.me/#">
+<span class="material-symbols-outlined text-lg">chat</span>
+                    Pedido WhatsApp
+                </a>
+</div>
+</nav>
+</header>
+<!-- Hero Section with Shader Background -->
+<header class="relative pt-32 pb-20 overflow-hidden">
+
+<div class="relative z-10 max-w-4xl mx-auto px-8 text-center">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold tracking-wider mb-6 uppercase">Centro de Ayuda</span>
+<h1 class="text-5xl md:text-6xl font-headline font-extrabold tracking-tight mb-6 bg-gradient-to-b from-on-surface to-on-surface-variant bg-clip-text text-transparent">
+                Preguntas Frecuentes
+            </h1>
+<p class="text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                Encuentra respuestas rápidas sobre nuestros servicios de farmacia, entregas a domicilio y atención 24 horas en la ciudad de La Paz.
+            </p>
+</div>
+</header>
+<!-- FAQ Main Section -->
+<main class="max-w-4xl mx-auto px-8 pb-32">
+<div class="space-y-4">
+<!-- Question 1 -->
+<details class="faq-accordion group glass-panel rounded-xl overflow-hidden transition-all duration-300">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none hover:bg-primary/5 transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">description</span>
+<h3 class="text-lg font-semibold text-on-surface">¿Cómo envío mi receta por WhatsApp?</h3>
+</div>
+<span class="faq-icon material-symbols-outlined text-primary">expand_more</span>
+</summary>
+<div class="p-6 pt-0 border-t border-primary/5 text-on-surface-variant leading-relaxed">
+                    Es muy sencillo. Solo debes tomar una fotografía clara de tu receta médica y enviarla a nuestro número oficial de WhatsApp. Uno de nuestros farmacéuticos verificará la disponibilidad y te enviará un presupuesto detallado de inmediato. Asegúrate de que la fecha y el sello médico sean legibles.
+                </div>
+</details>
+<!-- Question 2 -->
+<details class="faq-accordion group glass-panel rounded-xl overflow-hidden transition-all duration-300">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none hover:bg-primary/5 transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">schedule</span>
+<h3 class="text-lg font-semibold text-on-surface">¿Cuáles son los turnos de 24h?</h3>
+</div>
+<span class="faq-icon material-symbols-outlined text-primary">expand_more</span>
+</summary>
+<div class="p-6 pt-0 border-t border-primary/5 text-on-surface-variant leading-relaxed">
+                    En Farmacia Illimani cumplimos estrictamente con el rol de turnos establecido por el SEDES La Paz. Durante nuestros días de turno, atendemos las 24 horas de forma ininterrumpida. Puedes consultar nuestro calendario mensual de turnos en la sección "Horarios" de esta página o contactarnos directamente por WhatsApp.
+                </div>
+</details>
+<!-- Question 3 -->
+<details class="faq-accordion group glass-panel rounded-xl overflow-hidden transition-all duration-300">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none hover:bg-primary/5 transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">local_shipping</span>
+<h3 class="text-lg font-semibold text-on-surface">¿Realizan entregas a toda la ciudad de La Paz?</h3>
+</div>
+<span class="faq-icon material-symbols-outlined text-primary">expand_more</span>
+</summary>
+<div class="p-6 pt-0 border-t border-primary/5 text-on-surface-variant leading-relaxed">
+                    Sí, contamos con un servicio de delivery que cubre el Centro, Zona Sur, Miraflores, Sopocachi y laderas. Para zonas alejadas o El Alto, por favor consulta el costo de envío con nuestros operadores. El tiempo estimado de entrega suele ser de 30 a 60 minutos dependiendo del tráfico y la demanda.
+                </div>
+</details>
+<!-- Question 4 -->
+<details class="faq-accordion group glass-panel rounded-xl overflow-hidden transition-all duration-300">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none hover:bg-primary/5 transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">qr_code_2</span>
+<h3 class="text-lg font-semibold text-on-surface">¿Puedo pagar con código QR?</h3>
+</div>
+<span class="faq-icon material-symbols-outlined text-primary">expand_more</span>
+</summary>
+<div class="p-6 pt-0 border-t border-primary/5 text-on-surface-variant leading-relaxed">
+                    ¡Claro que sí! Aceptamos pagos mediante QR (Simple), transferencias bancarias directas, tarjetas de débito/crédito y efectivo. Si solicitas delivery, puedes indicarnos que prefieres pago por QR y te enviaremos el código generado al instante para confirmar tu pedido de forma segura.
+                </div>
+</details>
+<!-- Question 5 -->
+<details class="faq-accordion group glass-panel rounded-xl overflow-hidden transition-all duration-300">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none hover:bg-primary/5 transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">medical_services</span>
+<h3 class="text-lg font-semibold text-on-surface">¿Venden medicamentos controlados?</h3>
+</div>
+<span class="faq-icon material-symbols-outlined text-primary">expand_more</span>
+</summary>
+<div class="p-6 pt-0 border-t border-primary/5 text-on-surface-variant leading-relaxed">
+                    Sí, pero únicamente bajo la presentación física de la receta médica original retenida (receta valorada), de acuerdo con las normativas vigentes en Bolivia. Este tipo de medicamentos no se envían por delivery sin la verificación previa y recojo de la receta física por parte de nuestro personal autorizado.
+                </div>
+</details>
+</div>
+<!-- CTA Section -->
+<section class="mt-20 glass-panel-elevated p-10 rounded-2xl text-center relative overflow-hidden group">
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/10 blur-[80px] group-hover:bg-primary/20 transition-all duration-500 rounded-full"></div>
+<div class="relative z-10">
+<h2 class="text-3xl font-headline font-bold mb-4">¿Todavía tienes dudas?</h2>
+<p class="text-on-surface-variant mb-8 max-w-xl mx-auto">Nuestro equipo de atención al cliente está disponible para ayudarte de forma personalizada.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-on-primary font-bold rounded-xl hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(125,211,252,0.3)]" href="https://wa.me/#">
+<span class="material-symbols-outlined">chat</span>
+                        Chat con nosotros en WhatsApp
+                    </a>
+<a class="inline-flex items-center justify-center gap-3 px-8 py-4 border border-primary/30 text-primary font-bold rounded-xl hover:bg-primary/10 transition-all" href="tel:yournumber">
+<span class="material-symbols-outlined">call</span>
+                        Llamar a Farmacia
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Bento Grid Highlight (Aesthetic addition) -->
+<section class="max-w-7xl mx-auto px-6 pb-32">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="glass-panel p-8 rounded-2xl col-span-1 md:col-span-2 flex flex-col justify-between group">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-4">local_pharmacy</span>
+<h3 class="text-2xl font-bold mb-2">Compromiso con la Salud</h3>
+<p class="text-on-surface-variant">Farmacia Illimani es más que una farmacia; somos tus aliados en salud con más de 20 años sirviendo a la comunidad paceña con ética y profesionalismo.</p>
+</div>
+<div class="mt-8 flex gap-2">
+<div class="w-12 h-1 bg-primary rounded-full"></div>
+<div class="w-4 h-1 bg-primary/20 rounded-full"></div>
+<div class="w-4 h-1 bg-primary/20 rounded-full"></div>
+</div>
+</div>
+<div class="relative glass-panel rounded-2xl overflow-hidden group h-64 md:h-auto">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10"></div>
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" data-alt="A cinematic, high-end photograph of a modern pharmacy interior in La Paz Bolivia. The lighting is ethereal and cool with ice-blue accents reflecting off glass shelves and chrome fixtures. Professional pharmacists in clean white lab coats are visible in the background, out of focus. The overall mood is sterile yet welcoming, highlighting the premium and trustworthy atmosphere of Farmacia Illimani." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPtFaLzq-WBWxFYL6C_dUOiCV61xbnOuD7Gu0iNOnuR0sxx0Ca6Lt5HM1j0wwGgIdY8Bdmp4e-0enles3aolAKs5jshYl7S44Ju_TDE0CnO8tksIhE4-ULPw4JSVc45nCr0y94NB7Q5AMRFtmx8HA2Y_Ul78sVg2vbdSKaWNzfxZulcMlejdbwzF4nVCTk3PrADxVoBadWy-rm3HfA42Ywg0X7zwq4uVEa9YknwDfdluq84aHJBH-xhg')"></div>
+<div class="absolute bottom-6 left-6 z-20">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">Nuestras Sedes</span>
+<h4 class="text-xl font-bold">La Paz, Bolivia</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component Execution) -->
+<footer class="bg-background border-t border-outline-variant w-full py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-lg font-headline font-semibold text-primary">Farmacia Illimani</div>
+<p class="font-body text-on-surface-variant opacity-80 hover:opacity-100 transition-all">Tu farmacia de confianza en el corazón de La Paz. Atención profesional y calidez humana.</p>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-surface font-semibold">Enlaces Rápidos</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="servicios.html">Servicios</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="ubicacion.html">Ubicación</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="horarios.html">Horarios de Turno</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-surface font-semibold">Legal</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="terminos.html">Aviso Legal</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="privacidad.html">Privacidad</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="cookies.html">Cookies</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-surface font-semibold">Contacto</h4>
+<ul class="space-y-2">
+<li class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">phone</span>
+                        +591 2 244XXXX
+                    </li>
+<li class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                        Av. Illimani, La Paz
+                    </li>
+<li><a class="text-primary hover:underline transition-all" href="contacto.html">Contacto</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-outline-variant text-center">
+<p class="font-body text-on-surface-variant">© 2024 Farmacia Illimani. Todos los derechos reservados.</p>
+</div>
+</footer>
+<!-- Back to Top Micro-interaction -->
+<button class="fixed bottom-8 right-8 w-12 h-12 glass-panel-elevated text-primary rounded-full flex items-center justify-center translate-y-24 opacity-0 transition-all duration-500 hover:bg-primary hover:text-on-primary z-50" id="backToTop">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+<script>
+        // Scroll interaction for Back to Top
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('translate-y-24', 'opacity-0');
+            } else {
+                backToTopBtn.classList.add('translate-y-24', 'opacity-0');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Close other accordions when one is opened
+        const accordions = document.querySelectorAll('.faq-accordion');
+        accordions.forEach(acc => {
+            acc.addEventListener('toggle', () => {
+                if (acc.open) {
+                    accordions.forEach(otherAcc => {
+                        if (otherAcc !== acc && otherAcc.open) {
+                            otherAcc.open = false;
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body></html>

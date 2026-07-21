@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Horarios | Farmacia Illimani</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#7dd3fc",
+                        "surface-container-low": "#111828",
+                        "surface-container-high": "#1a2438",
+                        "surface-container-lowest": "#0a0e1a",
+                        "secondary-fixed": "#c0d8e8",
+                        "surface-tint": "#7dd3fc",
+                        "on-tertiary-fixed": "#1a002e",
+                        "on-primary-fixed-variant": "#004d73",
+                        "secondary": "#88b4cc",
+                        "outline": "#4a6070",
+                        "secondary-fixed-dim": "#88b4cc",
+                        "on-error": "#1a0000",
+                        "on-surface-variant": "#a0b4c4",
+                        "tertiary": "#c8a0f0",
+                        "surface-container-highest": "#202c42",
+                        "surface": "#0f1524",
+                        "on-error-container": "#ffb3b3",
+                        "on-secondary-fixed": "#0d1f2b",
+                        "inverse-primary": "#0a4c6e",
+                        "on-primary-container": "#c8eaff",
+                        "on-secondary-container": "#c0d8e8",
+                        "tertiary-container": "#3d2060",
+                        "surface-bright": "#1a2438",
+                        "on-primary": "#001f2e",
+                        "on-tertiary-fixed-variant": "#4d2a73",
+                        "background": "#0a0e1a",
+                        "on-tertiary": "#1a002e",
+                        "on-surface": "#e0e8f0",
+                        "surface-dim": "#0f1524",
+                        "inverse-surface": "#e0e8f0",
+                        "error-container": "#3d1414",
+                        "surface-container": "#141c2e",
+                        "on-tertiary-container": "#e8d0ff",
+                        "on-secondary-fixed-variant": "#2a4a5e",
+                        "outline-variant": "#2a3a48",
+                        "on-primary-fixed": "#001f2e",
+                        "on-secondary": "#001f2e",
+                        "inverse-on-surface": "#0a0e1a",
+                        "error": "#ff6b6b",
+                        "secondary-container": "#1a3a4e",
+                        "on-background": "#e0e8f0",
+                        "primary-fixed-dim": "#7dd3fc",
+                        "surface-variant": "#1a2438",
+                        "tertiary-fixed-dim": "#c8a0f0",
+                        "primary-container": "#0e4d6e",
+                        "tertiary-fixed": "#e8d0ff",
+                        "primary-fixed": "#c8eaff"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0a0e1a;
+            color: #e0e8f0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(15, 21, 36, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(125, 211, 252, 0.1);
+        }
+        .glass-card-elevated {
+            background: rgba(26, 36, 56, 0.75);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(125, 211, 252, 0.2);
+        }
+        .ice-glow {
+            box-shadow: 0 0 30px rgba(125, 211, 252, 0.08);
+        }
+        .status-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: .5; transform: scale(1.2); }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ice-gradient-text {
+            background: linear-gradient(135deg, #7dd3fc 0%, #c8a0f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary/30 selection:text-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-lg border-b border-primary/10 shadow-[0_0_30px_rgba(125,211,252,0.05)]">
+<nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+<a class="text-xl font-headline font-semibold text-primary dark:text-primary-fixed-dim" href="index.html">Farmacia Illimani</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="catalogo.html">Categorías</a>
+<a class="font-headline font-semibold tracking-tight text-primary border-b-2 border-primary pb-1" href="horarios.html">Horarios</a>
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="ubicacion.html">Ubicación</a>
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-primary/10 rounded-full transition-all duration-300">search</button>
+<a class="hidden md:flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 text-primary rounded-full font-semibold hover:bg-primary/20 transition-all active:scale-95" href="https://wa.me/#">
+<span class="material-symbols-outlined text-lg">chat</span>
+                    Pedido WhatsApp
+                </a>
+</div>
+</nav>
+</header>
+<main class="pt-24 flex-grow">
+<!-- Hero Section -->
+<section class="relative px-6 py-20 overflow-hidden">
+
+<div class="max-w-5xl mx-auto relative z-10 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-widest uppercase mb-6">
+<span class="relative flex h-2 w-2">
+<span class="status-pulse absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    Abierto Ahora
+                </div>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tight mb-6">Nuestros <span class="ice-gradient-text">Horarios</span></h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto font-body leading-relaxed">
+                    Comprometidos con la salud y bienestar de la comunidad de Sopocachi. Estamos aquí cuando nos necesita, ofreciendo atención profesional y calidez humana.
+                </p>
+</div>
+</section>
+<!-- Main Content Grid -->
+<section class="px-6 pb-20">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Farmacia de Turno Highlight (Tuesday) -->
+<div class="lg:col-span-12">
+<div class="glass-card-elevated rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden group">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl transition-all group-hover:bg-primary/20"></div>
+<div class="flex-1 space-y-4">
+<div class="flex items-center gap-3 text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emergency</span>
+<span class="font-bold tracking-widest uppercase text-sm">Farmacia de Turno</span>
+</div>
+<h2 class="text-3xl font-headline font-bold">Martes: Atención 24 Horas</h2>
+<p class="text-on-surface-variant max-w-xl">
+                                Todos los martes, Farmacia Illimani permanece abierta durante toda la noche para garantizar que los vecinos de Sopocachi tengan acceso a medicamentos esenciales en cualquier momento.
+                            </p>
+</div>
+<div class="flex flex-col items-center justify-center p-6 bg-primary/10 rounded-xl border border-primary/20 min-w-[200px]">
+<span class="text-primary font-bold text-lg mb-1">Estado de Hoy</span>
+<div class="text-4xl font-extrabold text-primary">24h</div>
+<span class="text-on-surface-variant text-sm mt-2">Continuo</span>
+</div>
+</div>
+</div>
+<!-- Structured Weekly Schedule -->
+<div class="lg:col-span-7 space-y-4">
+<h3 class="text-xl font-headline font-semibold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">schedule</span>
+                        Horario Detallado
+                    </h3>
+<div class="space-y-3">
+<!-- Monday -->
+<div class="glass-card rounded-xl p-5 flex justify-between items-center hover:bg-surface-container-high/40 transition-colors">
+<span class="font-medium">Lunes</span>
+<span class="text-on-surface-variant font-mono">08:00 — 22:00</span>
+</div>
+<!-- Tuesday Special -->
+<div class="glass-card rounded-xl p-5 flex justify-between items-center border-primary/40 bg-primary/5">
+<span class="font-bold text-primary">Martes (Turno)</span>
+<span class="text-primary font-mono font-bold">24 Horas (Abierto)</span>
+</div>
+<!-- Wed-Fri -->
+<div class="glass-card rounded-xl p-5 flex justify-between items-center hover:bg-surface-container-high/40 transition-colors">
+<span class="font-medium">Miércoles a Viernes</span>
+<span class="text-on-surface-variant font-mono">08:00 — 22:00</span>
+</div>
+<!-- Saturday -->
+<div class="glass-card rounded-xl p-5 flex justify-between items-center hover:bg-surface-container-high/40 transition-colors">
+<span class="font-medium">Sábados</span>
+<span class="text-on-surface-variant font-mono">08:30 — 21:00</span>
+</div>
+<!-- Sunday -->
+<div class="glass-card rounded-xl p-5 flex justify-between items-center hover:bg-surface-container-high/40 transition-colors">
+<span class="font-medium">Domingos y Feriados</span>
+<span class="text-on-surface-variant font-mono">09:00 — 20:00</span>
+</div>
+</div>
+</div>
+<!-- Strategic Location & Map -->
+<div class="lg:col-span-5 space-y-6">
+<h3 class="text-xl font-headline font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">location_on</span>
+                        Ubicación Estratégica
+                    </h3>
+<div class="glass-card rounded-2xl overflow-hidden h-full flex flex-col">
+<div class="relative h-64 w-full">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A professional aerial photography shot of the Sopocachi neighborhood in La Paz, Bolivia, during a clear evening. The urban landscape features modern architecture with the Illimani mountain in the far background. The lighting is cold, blue-toned with soft urban glows, matching the Glacier dark mode aesthetic with a high-end, atmospheric feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJqPXh85QyD6j32xxx2bWdkvJPkmhLsjJaqfwXQ0ZPL39qeOHj3XNB76-GtdOKgApEXEQfj1hfejjXMthQlgEojNLUT7Z_h6937UXOHYLb92SwcKQ88VGjmrhKB788qQUCQeYrnSa9ZbjL-ObXziPrMBv28j0Q4h0jtbb1q40xlrRRd0w3epOmzh6Fv2nQSEEtp6XKMeigKNvNVsWsOt71vCURp1P_jRrGycNNUpNYKZ6kX4iI2yJVog')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4 bg-surface/80 backdrop-blur-md p-4 rounded-xl border border-white/5">
+<p class="text-sm font-medium">Calle Belisario Salinas, Esq. Presbitero Medina</p>
+<p class="text-xs text-on-surface-variant">Sopocachi, La Paz</p>
+</div>
+</div>
+<div class="p-6 space-y-4 flex-grow flex flex-col justify-between">
+<p class="text-on-surface-variant text-sm italic">
+                                "Nuestra ubicación en el corazón de Sopocachi nos permite estar cerca de centros médicos y residencias para su comodidad."
+                            </p>
+<a class="w-full py-3 bg-surface-container-highest border border-primary/20 rounded-xl text-center font-bold text-primary flex items-center justify-center gap-2 hover:bg-primary/10 transition-all" href="https://maps.google.com/?q=Sopocachi,LaPaz" target="_blank">
+<span class="material-symbols-outlined text-sm">map</span>
+                                Abrir en Google Maps
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="px-6 py-24 bg-surface-container-lowest relative">
+<div class="max-w-4xl mx-auto glass-card-elevated rounded-3xl p-12 text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+<h2 class="text-3xl font-headline font-bold mb-4">¿Tiene una emergencia fuera de horario?</h2>
+<p class="text-on-surface-variant mb-8 max-w-lg mx-auto">
+                    Estamos disponibles para consultas urgentes a través de nuestra línea de WhatsApp. Nuestro equipo de turno le responderá a la brevedad.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="bg-[#25D366] text-white px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:scale-105 transition-transform" href="https://wa.me/#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.224-3.82l.303.18c1.397.831 3.013 1.27 4.673 1.271 5.235 0 9.497-4.262 9.5-9.501 0-2.537-.988-4.921-2.783-6.716s-4.179-2.783-6.717-2.783c-5.239 0-9.501 4.262-9.501 9.501 0 1.933.589 3.812 1.704 5.4l.197.281-.655 2.392 2.459-.645zm11.367-7.143c-.301-.15-1.78-.879-2.056-.979-.275-.1-.475-.15-.675.15s-.776.979-.951 1.178-.35.225-.65.075c-.301-.15-1.267-.467-2.414-1.491-.892-.796-1.493-1.78-1.668-2.079s-.019-.462.131-.611c.135-.133.301-.35.451-.525.15-.175.2-.3.3-.5s.05-.375-.025-.525-.675-1.626-.925-2.226c-.243-.585-.491-.505-.675-.514-.174-.009-.375-.011-.575-.011s-.525.075-.8.375c-.275.3-.1.525-1.1 1.5s-1.126 1.925-1.126 2.35c0 .426.075.825.175 1.05 2.1 5.424 5.4 6.8 5.4 6.8s.825.425 2.125.425 2.1-.425 2.1-.425c.375-.125 1.05-.425 1.25-.825s.2-.825.125-.975-.3-.225-.6-.375z"></path></svg>
+                        WhatsApp Directo
+                    </a>
+<a class="bg-surface-container-highest text-on-surface px-8 py-4 rounded-full font-bold border border-white/10 hover:bg-surface-container-high transition-colors" href="servicios.html">
+                        Ver Todos los Servicios
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-lowest/80 backdrop-blur-lg border-t border-primary/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-12 py-12 w-full max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-lg font-headline font-bold text-primary">Farmacia Illimani</div>
+<p class="font-body text-sm text-on-surface-variant max-w-xs">
+                    Su farmacia de confianza en el corazón de Sopocachi, brindando atención de calidad por más de 15 años.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors">face_nod</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors">infrared</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<a class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors duration-300" href="https://wa.me/#">Contacto</a>
+<a class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors duration-300" href="terminos.html">Aviso Legal</a>
+<a class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors duration-300" href="privacidad.html">Privacidad</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors duration-300" href="terminos.html">Términos</a>
+<a class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors duration-300" href="horarios.html">Horarios de Atención</a>
+<a class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors duration-300" href="ubicacion.html">Ubicación Central</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-surface font-semibold text-sm">Newsletter</h4>
+<div class="flex gap-2">
+<input class="bg-surface border border-white/10 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-primary/50 flex-grow" placeholder="Su email" type="email"/>
+<button class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm font-bold">Unirse</button>
+</div>
+<p class="font-body text-[10px] text-on-surface-variant uppercase tracking-widest">© 2024 Farmacia Illimani. Excelencia en salud.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for current time status
+        function updateLiveStatus() {
+            const now = new Date();
+            const day = now.getDay(); // 0-6 (Sun-Sat)
+            const hour = now.getHours();
+            const min = now.getMinutes();
+            const time = hour + min / 60;
+
+            let isOpen = false;
+
+            // Simplified logic based on provided schedule
+            if (day === 2) { // Tuesday Turno 24h
+                isOpen = true;
+            } else if (day >= 1 && day <= 5) { // Mon, Wed-Fri 08:00 - 22:00
+                if (time >= 8 && time < 22) isOpen = true;
+            } else if (day === 6) { // Sat 08:30 - 21:00
+                if (time >= 8.5 && time < 21) isOpen = true;
+            } else { // Sun 09:00 - 20:00
+                if (time >= 9 && time < 20) isOpen = true;
+            }
+
+            const statusDot = document.querySelector('.status-pulse');
+            const statusText = document.querySelector('.tracking-widest.uppercase.mb-6');
+            
+            if (!isOpen) {
+                statusDot?.classList.replace('bg-primary', 'bg-error');
+                if (statusText) {
+                    statusText.innerHTML = `
+                        <span class="relative flex h-2 w-2">
+                            <span class="status-pulse absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-error"></span>
+                        </span>
+                        Cerrado Ahora
+                    `;
+                    statusText.classList.replace('text-primary', 'text-error');
+                    statusText.classList.replace('bg-primary/10', 'bg-error/10');
+                    statusText.classList.replace('border-primary/20', 'border-error/20');
+                }
+            }
+        }
+        
+        updateLiveStatus();
+        setInterval(updateLiveStatus, 60000); // Check every minute
+    </script>
+</body></html>

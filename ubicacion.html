@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ubicación | Farmacia Illimani</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#0f1524",
+                    "inverse-on-surface": "#0a0e1a",
+                    "on-tertiary-container": "#e8d0ff",
+                    "tertiary-fixed": "#e8d0ff",
+                    "on-secondary-fixed": "#0d1f2b",
+                    "background": "#0a0e1a",
+                    "on-secondary-container": "#c0d8e8",
+                    "on-secondary": "#001f2e",
+                    "inverse-surface": "#e0e8f0",
+                    "on-surface-variant": "#a0b4c4",
+                    "tertiary-container": "#3d2060",
+                    "tertiary-fixed-dim": "#c8a0f0",
+                    "surface-tint": "#7dd3fc",
+                    "on-primary-fixed": "#001f2e",
+                    "on-secondary-fixed-variant": "#2a4a5e",
+                    "primary-fixed-dim": "#7dd3fc",
+                    "error": "#ff6b6b",
+                    "tertiary": "#c8a0f0",
+                    "secondary-fixed": "#c0d8e8",
+                    "secondary-container": "#1a3a4e",
+                    "on-primary-container": "#c8eaff",
+                    "surface-variant": "#1a2438",
+                    "error-container": "#3d1414",
+                    "on-error-container": "#ffb3b3",
+                    "surface-container": "#141c2e",
+                    "primary": "#7dd3fc",
+                    "surface-container-highest": "#202c42",
+                    "surface-container-lowest": "#0a0e1a",
+                    "primary-fixed": "#c8eaff",
+                    "surface-bright": "#1a2438",
+                    "primary-container": "#0e4d6e",
+                    "on-tertiary-fixed-variant": "#4d2a73",
+                    "surface-container-high": "#1a2438",
+                    "inverse-primary": "#0a4c6e",
+                    "on-error": "#1a0000",
+                    "secondary": "#88b4cc",
+                    "outline-variant": "#2a3a48",
+                    "on-primary": "#001f2e",
+                    "on-primary-fixed-variant": "#004d73",
+                    "on-tertiary-fixed": "#1a002e",
+                    "on-background": "#e0e8f0",
+                    "secondary-fixed-dim": "#88b4cc",
+                    "surface-container-low": "#111828",
+                    "on-surface": "#e0e8f0",
+                    "surface-dim": "#0f1524",
+                    "outline": "#4a6070",
+                    "on-tertiary": "#1a002e"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "display": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(15, 21, 36, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(125, 211, 252, 0.1);
+        }
+        .glass-panel-elevated {
+            background: rgba(15, 21, 36, 0.75);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(125, 211, 252, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0a0e1a;
+            color: #e0e8f0;
+            overflow-x: hidden;
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(125, 211, 252, 0.3);
+        }
+    </style>
+</head>
+<body class="font-body">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-lg border-b border-primary/10 shadow-[0_0_30px_rgba(125,211,252,0.05)]">
+<nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+<a class="text-xl font-headline font-semibold text-primary dark:text-primary-fixed-dim" href="index.html">Farmacia Illimani</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="catalogo.html">Categorías</a>
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="horarios.html">Horarios</a>
+<a class="font-headline font-semibold tracking-tight text-primary border-b-2 border-primary pb-1" href="ubicacion.html">Ubicación</a>
+<a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-primary/10 rounded-full transition-all duration-300">search</button>
+<a class="hidden md:flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 text-primary rounded-full font-semibold hover:bg-primary/20 transition-all active:scale-95" href="https://wa.me/#">
+<span class="material-symbols-outlined text-lg">chat</span>
+                    Pedido WhatsApp
+                </a>
+</div>
+</nav>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-28 pb-20 px-6 max-w-7xl mx-auto space-y-12">
+<!-- Header Section -->
+<header class="text-center space-y-4 max-w-3xl mx-auto">
+<h1 class="text-5xl md:text-6xl font-headline font-bold text-on-surface tracking-tight">
+                Nuestra <span class="text-primary text-glow">Ubicación</span>
+</h1>
+<p class="text-lg text-on-surface-variant font-light">
+                Estamos ubicados en el corazón de Sopocachi, ofreciendo atención farmacéutica premium en una de las zonas más emblemáticas de La Paz.
+            </p>
+</header>
+<!-- Bento Grid Layout for Map and Info -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 h-auto lg:h-[650px]">
+<!-- Map Representation (Left large area) -->
+<div class="lg:col-span-8 glass-panel rounded-xl overflow-hidden relative group">
+<div class="absolute inset-0 z-0 bg-cover bg-center grayscale contrast-125 opacity-40 group-hover:opacity-60 transition-opacity duration-700" data-location="La Paz, Sopocachi, Bolivia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOKh_V_r4-xE_HAWK74Qz2jq-YgGBln_Dv7iz32y6qdpONSmauT1Mj16vUd0-otcL9eKRXuKbvuVXSRSMKiLeTnYeNnLAYuic9LMU9pwz4Xsqmq4G5Rwx4jmOJNGmMu8nAgA6s3BR9JvMwl87n0D2rQI6C4icgTj6YKsqlE1XbR3rwkmPfVcQV8ORLqNtInGBwYiQFjRUE263bbTirqyIYDPVonPOkbfUxQwKOhfKwJ50x7C1MRDJEOg')">
+</div>
+<!-- Interactive Overlay Elements -->
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent pointer-events-none"></div>
+<!-- Floating Pin Indicator -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center animate-bounce shadow-[0_0_20px_rgba(125,211,252,0.6)]">
+<span class="material-symbols-outlined text-inverse-on-surface" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="mt-2 glass-panel-elevated px-4 py-2 rounded-full text-xs font-bold text-primary tracking-widest uppercase">
+                        Farmacia Illimani
+                    </div>
+</div>
+<!-- Map Controls (Visual) -->
+<div class="absolute bottom-6 left-6 flex flex-col gap-2">
+<button class="glass-panel-elevated w-10 h-10 flex items-center justify-center rounded-lg text-primary hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="glass-panel-elevated w-10 h-10 flex items-center justify-center rounded-lg text-primary hover:bg-primary/20 transition-all">
+<span class="material-symbols-outlined">remove</span>
+</button>
+</div>
+<a class="absolute bottom-6 right-6 glass-panel-elevated px-6 py-3 rounded-full flex items-center gap-3 text-primary hover:scale-105 transition-transform group" href="https://maps.google.com" target="_blank">
+<span class="font-semibold">Abrir en Google Maps</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">open_in_new</span>
+</a>
+</div>
+<!-- Contact & Quick Info (Right column) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- Address Card -->
+<div class="glass-panel-elevated p-8 rounded-xl flex-1 flex flex-col justify-center space-y-6">
+<div>
+<h3 class="text-primary text-sm font-bold tracking-[0.2em] uppercase mb-4">Dirección Principal</h3>
+<p class="text-2xl font-headline font-semibold text-on-surface leading-tight">
+                            Rosendo Gutiérrez esq. 20 de Octubre
+                        </p>
+<p class="text-on-surface-variant mt-1 italic">Sopocachi, Edificio Los Pinos, PB.</p>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-xl">call</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant font-medium">Línea Directa</p>
+<p class="text-on-surface font-semibold">+591 2 241XXXX</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-xl">mail</span>
+</div>
+<div>
+<p class="text-xs text-on-surface-variant font-medium">Consultas Email</p>
+<p class="text-on-surface font-semibold">hola@farmaciaillimani.bo</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Schedule Hint -->
+<div class="glass-panel p-6 rounded-xl flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary text-3xl">schedule</span>
+<div>
+<p class="text-sm font-semibold text-on-surface">Atención 24 Horas</p>
+<p class="text-xs text-on-surface-variant">Turnos rotativos todos los días.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- How to Get There Section -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-1 py-4">
+<h2 class="text-3xl font-headline font-bold text-on-surface">Cómo llegar</h2>
+<p class="text-on-surface-variant mt-4">Puntos de referencia estratégicos para que tu visita sea lo más sencilla posible.</p>
+</div>
+<div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+<!-- Reference 1 -->
+<div class="glass-panel p-6 rounded-xl hover:border-primary/30 transition-all duration-500">
+<div class="w-12 h-12 bg-surface-container-highest rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">park</span>
+</div>
+<h4 class="font-bold text-on-surface mb-2">Plaza Abaroa</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        Estamos a solo dos cuadras de la Plaza Abaroa. Una caminata de 5 minutos por la Calle Rosendo Gutiérrez.
+                    </p>
+</div>
+<!-- Reference 2 -->
+<div class="glass-panel p-6 rounded-xl hover:border-primary/30 transition-all duration-500">
+<div class="w-12 h-12 bg-surface-container-highest rounded-lg flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary">directions_subway</span>
+</div>
+<h4 class="font-bold text-on-surface mb-2">Teleférico Amarillo</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        Desde la estación Sopocachi, desciende por la Av. 20 de Octubre en dirección sur. Es un trayecto de aproximadamente 8 minutos.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="relative overflow-hidden rounded-3xl p-1 md:p-px bg-gradient-to-r from-primary/30 via-tertiary/20 to-primary/30">
+<div class="glass-panel-elevated rounded-[calc(1.5rem-1px)] p-12 text-center relative z-10 space-y-8">
+<div class="max-w-2xl mx-auto space-y-4">
+<h2 class="text-4xl font-headline font-bold text-on-surface">¿Necesitas ayuda inmediata?</h2>
+<p class="text-on-surface-variant">Escríbenos por WhatsApp para consultar disponibilidad de medicamentos o realizar pedidos a domicilio.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-primary text-inverse-on-surface px-10 py-4 rounded-full font-bold flex items-center justify-center gap-3 hover:shadow-[0_0_20px_rgba(125,211,252,0.4)] transition-all active:scale-95" href="https://wa.me/#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                        Contactar vía WhatsApp
+                    </a>
+<a class="glass-panel px-10 py-4 rounded-full font-bold text-on-surface hover:bg-surface-variant transition-all active:scale-95 inline-block text-center" href="catalogo.html">
+                        Ver Catálogo Online
+                    </a>
+</div>
+</div>
+<!-- Background glow effect for CTA -->
+<div class="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/20 blur-[100px] rounded-full"></div>
+<div class="absolute -top-20 -left-20 w-80 h-80 bg-tertiary/10 blur-[100px] rounded-full"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 border-t border-outline-variant/30 bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="text-lg font-headline font-bold text-primary">Farmacia Illimani</div>
+<div class="flex flex-wrap justify-center gap-8 text-sm font-body text-on-surface-variant">
+<a class="hover:text-tertiary transition-colors" href="privacidad.html">Privacidad</a>
+<a class="hover:text-tertiary transition-colors" href="terminos.html">Términos</a>
+<a class="hover:text-tertiary transition-colors" href="https://wa.me/#">Contacto</a>
+<a class="hover:text-tertiary transition-colors" href="preguntas.html">Preguntas Frecuentes</a>
+</div>
+<p class="text-sm font-body text-on-surface-variant text-center md:text-right">
+                © 2024 Farmacia Illimani - Farmacia Premium Sopocachi. La Paz, Bolivia.
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for hover states and subtle parallax
+        document.addEventListener('mousemove', (e) => {
+            const panels = document.querySelectorAll('.glass-panel-elevated');
+            const x = (window.innerWidth / 2 - e.pageX) / 50;
+            const y = (window.innerHeight / 2 - e.pageY) / 50;
+            
+            panels.forEach(panel => {
+                if(panel.closest('section')) {
+                    // Apply very subtle shift to sections only to avoid motion sickness
+                    // panel.style.transform = `translateX(${x}px) translateY(${y}px)`;
+                }
+            });
+        });
+    </script>
+</body></html>
