@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="es"><head>
+<html lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script>(function(){try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 <title>Política de Privacidad | Farmacia Illimani</title>
 <meta content="Política de privacidad de Farmacia Illimani, farmacia en Sopocachi, La Paz. Cómo protegemos tus datos personales y de salud al usar nuestros servicios." name="description"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -15,53 +16,53 @@
         theme: {
           extend: {
             "colors": {
-                    "on-tertiary-fixed-variant": "#4d2a73",
-                    "tertiary-container": "#3d2060",
-                    "surface-container": "#141c2e",
-                    "background": "#0a0e1a",
-                    "on-tertiary-container": "#e8d0ff",
-                    "primary-fixed-dim": "#7dd3fc",
-                    "surface": "#0f1524",
-                    "primary-fixed": "#c8eaff",
-                    "error-container": "#3d1414",
-                    "surface-tint": "#7dd3fc",
-                    "inverse-primary": "#0a4c6e",
-                    "inverse-on-surface": "#0a0e1a",
-                    "on-error": "#1a0000",
-                    "surface-bright": "#1a2438",
-                    "on-surface": "#e0e8f0",
-                    "on-primary-fixed-variant": "#004d73",
-                    "on-secondary-container": "#c0d8e8",
-                    "on-secondary": "#001f2e",
-                    "surface-variant": "#1a2438",
-                    "on-primary": "#001f2e",
-                    "secondary-fixed-dim": "#88b4cc",
-                    "on-secondary-fixed": "#0d1f2b",
-                    "surface-container-highest": "#202c42",
-                    "secondary-fixed": "#c0d8e8",
-                    "on-secondary-fixed-variant": "#2a4a5e",
-                    "tertiary-fixed": "#e8d0ff",
-                    "outline": "#4a6070",
-                    "outline-variant": "#2a3a48",
-                    "surface-container-high": "#1a2438",
-                    "tertiary-fixed-dim": "#c8a0f0",
-                    "on-tertiary-fixed": "#1a002e",
-                    "on-primary-container": "#c8eaff",
-                    "surface-container-lowest": "#0a0e1a",
-                    "surface-container-low": "#111828",
-                    "surface-dim": "#0f1524",
-                    "on-background": "#e0e8f0",
-                    "inverse-surface": "#e0e8f0",
-                    "primary-container": "#0e4d6e",
-                    "primary": "#7dd3fc",
-                    "secondary-container": "#1a3a4e",
-                    "on-tertiary": "#1a002e",
-                    "tertiary": "#c8a0f0",
-                    "on-surface-variant": "#a0b4c4",
-                    "secondary": "#88b4cc",
-                    "on-primary-fixed": "#001f2e",
-                    "on-error-container": "#ffb3b3",
-                    "error": "#ff6b6b"
+                    "on-tertiary-fixed-variant": "var(--on-tertiary-fixed-variant)",
+                    "tertiary-container": "var(--tertiary-container)",
+                    "surface-container": "var(--surface-container)",
+                    "background": "var(--background)",
+                    "on-tertiary-container": "var(--on-tertiary-container)",
+                    "primary-fixed-dim": "var(--primary-fixed-dim)",
+                    "surface": "var(--surface)",
+                    "primary-fixed": "var(--primary-fixed)",
+                    "error-container": "var(--error-container)",
+                    "surface-tint": "var(--surface-tint)",
+                    "inverse-primary": "var(--inverse-primary)",
+                    "inverse-on-surface": "var(--inverse-on-surface)",
+                    "on-error": "var(--on-error)",
+                    "surface-bright": "var(--surface-bright)",
+                    "on-surface": "var(--on-surface)",
+                    "on-primary-fixed-variant": "var(--on-primary-fixed-variant)",
+                    "on-secondary-container": "var(--on-secondary-container)",
+                    "on-secondary": "var(--on-secondary)",
+                    "surface-variant": "var(--surface-variant)",
+                    "on-primary": "var(--on-primary)",
+                    "secondary-fixed-dim": "var(--secondary-fixed-dim)",
+                    "on-secondary-fixed": "var(--on-secondary-fixed)",
+                    "surface-container-highest": "var(--surface-container-highest)",
+                    "secondary-fixed": "var(--secondary-fixed)",
+                    "on-secondary-fixed-variant": "var(--on-secondary-fixed-variant)",
+                    "tertiary-fixed": "var(--tertiary-fixed)",
+                    "outline": "var(--outline)",
+                    "outline-variant": "var(--outline-variant)",
+                    "surface-container-high": "var(--surface-container-high)",
+                    "tertiary-fixed-dim": "var(--tertiary-fixed-dim)",
+                    "on-tertiary-fixed": "var(--on-tertiary-fixed)",
+                    "on-primary-container": "var(--on-primary-container)",
+                    "surface-container-lowest": "var(--surface-container-lowest)",
+                    "surface-container-low": "var(--surface-container-low)",
+                    "surface-dim": "var(--surface-dim)",
+                    "on-background": "var(--on-background)",
+                    "inverse-surface": "var(--inverse-surface)",
+                    "primary-container": "var(--primary-container)",
+                    "primary": "var(--primary)",
+                    "secondary-container": "var(--secondary-container)",
+                    "on-tertiary": "var(--on-tertiary)",
+                    "tertiary": "var(--tertiary)",
+                    "on-surface-variant": "var(--on-surface-variant)",
+                    "secondary": "var(--secondary)",
+                    "on-primary-fixed": "var(--on-primary-fixed)",
+                    "on-error-container": "var(--on-error-container)",
+                    "error": "var(--error)"
             },
             "fontFamily": {
                     "headline": ["Inter"],
@@ -74,15 +75,180 @@
       }
     </script>
 <style>
+        :root {
+            --background: #f4f8fb;
+            --on-background: #10161d;
+            --surface: #ffffff;
+            --surface-dim: #d7e0e6;
+            --surface-bright: #ffffff;
+            --surface-container-lowest: #ffffff;
+            --surface-container-low: #f3f7fa;
+            --surface-container: #edf2f5;
+            --surface-container-high: #e7ecf0;
+            --surface-container-highest: #e1e7ea;
+            --surface-variant: #dde6ea;
+            --on-surface: #10161d;
+            --on-surface-variant: #47535c;
+            --outline: #77838c;
+            --outline-variant: #c8d2d8;
+            --inverse-surface: #1f2932;
+            --inverse-on-surface: #eef3f6;
+            --inverse-primary: #7dd3fc;
+            --surface-tint: #0a6ea3;
+            --primary: #0a6ea3;
+            --on-primary: #ffffff;
+            --primary-container: #c8eaff;
+            --on-primary-container: #001f2e;
+            --primary-fixed: #c8eaff;
+            --primary-fixed-dim: #7dd3fc;
+            --on-primary-fixed: #001f2e;
+            --on-primary-fixed-variant: #004d73;
+            --secondary: #4c6672;
+            --on-secondary: #ffffff;
+            --secondary-container: #d2e6f0;
+            --on-secondary-container: #0c1f27;
+            --secondary-fixed: #c0d8e8;
+            --secondary-fixed-dim: #88b4cc;
+            --on-secondary-fixed: #0d1f2b;
+            --on-secondary-fixed-variant: #2a4a5e;
+            --tertiary: #7a4fa0;
+            --on-tertiary: #ffffff;
+            --tertiary-container: #ecdcff;
+            --on-tertiary-container: #2a0f47;
+            --tertiary-fixed: #e8d0ff;
+            --tertiary-fixed-dim: #c8a0f0;
+            --on-tertiary-fixed: #1a002e;
+            --on-tertiary-fixed-variant: #4d2a73;
+            --error: #ba1a1a;
+            --on-error: #ffffff;
+            --error-container: #ffdad6;
+            --on-error-container: #410002;
+            --status-open: #16a34a;
+                    --glass-bg: rgba(255, 255, 255, 0.55);
+            --glass-bg-elevated: rgba(255, 255, 255, 0.75);
+            --glass-border: rgba(10, 110, 163, 0.15);
+            --glass-border-elevated: rgba(10, 110, 163, 0.2);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme]) {
+            --background: #0a0e1a;
+            --on-background: #e0e8f0;
+            --surface: #0f1524;
+            --surface-dim: #0f1524;
+            --surface-bright: #1a2438;
+            --surface-container-lowest: #0a0e1a;
+            --surface-container-low: #111828;
+            --surface-container: #141c2e;
+            --surface-container-high: #1a2438;
+            --surface-container-highest: #202c42;
+            --surface-variant: #1a2438;
+            --on-surface: #e0e8f0;
+            --on-surface-variant: #a0b4c4;
+            --outline: #4a6070;
+            --outline-variant: #2a3a48;
+            --inverse-surface: #e0e8f0;
+            --inverse-on-surface: #0a0e1a;
+            --inverse-primary: #0a4c6e;
+            --surface-tint: #7dd3fc;
+            --primary: #7dd3fc;
+            --on-primary: #001f2e;
+            --primary-container: #0e4d6e;
+            --on-primary-container: #c8eaff;
+            --primary-fixed: #c8eaff;
+            --primary-fixed-dim: #7dd3fc;
+            --on-primary-fixed: #001f2e;
+            --on-primary-fixed-variant: #004d73;
+            --secondary: #88b4cc;
+            --on-secondary: #001f2e;
+            --secondary-container: #1a3a4e;
+            --on-secondary-container: #c0d8e8;
+            --secondary-fixed: #c0d8e8;
+            --secondary-fixed-dim: #88b4cc;
+            --on-secondary-fixed: #0d1f2b;
+            --on-secondary-fixed-variant: #2a4a5e;
+            --tertiary: #c8a0f0;
+            --on-tertiary: #1a002e;
+            --tertiary-container: #3d2060;
+            --on-tertiary-container: #e8d0ff;
+            --tertiary-fixed: #e8d0ff;
+            --tertiary-fixed-dim: #c8a0f0;
+            --on-tertiary-fixed: #1a002e;
+            --on-tertiary-fixed-variant: #4d2a73;
+            --error: #ff6b6b;
+            --on-error: #1a0000;
+            --error-container: #3d1414;
+            --on-error-container: #ffb3b3;
+            --status-open: #4ade80;
+            --glass-bg: rgba(15, 21, 36, 0.6);
+            --glass-bg-elevated: rgba(15, 21, 36, 0.75);
+            --glass-border: rgba(125, 211, 252, 0.1);
+            --glass-border-elevated: rgba(125, 211, 252, 0.15);
+            }
+        }
+        :root[data-theme="dark"] {
+            --background: #0a0e1a;
+            --on-background: #e0e8f0;
+            --surface: #0f1524;
+            --surface-dim: #0f1524;
+            --surface-bright: #1a2438;
+            --surface-container-lowest: #0a0e1a;
+            --surface-container-low: #111828;
+            --surface-container: #141c2e;
+            --surface-container-high: #1a2438;
+            --surface-container-highest: #202c42;
+            --surface-variant: #1a2438;
+            --on-surface: #e0e8f0;
+            --on-surface-variant: #a0b4c4;
+            --outline: #4a6070;
+            --outline-variant: #2a3a48;
+            --inverse-surface: #e0e8f0;
+            --inverse-on-surface: #0a0e1a;
+            --inverse-primary: #0a4c6e;
+            --surface-tint: #7dd3fc;
+            --primary: #7dd3fc;
+            --on-primary: #001f2e;
+            --primary-container: #0e4d6e;
+            --on-primary-container: #c8eaff;
+            --primary-fixed: #c8eaff;
+            --primary-fixed-dim: #7dd3fc;
+            --on-primary-fixed: #001f2e;
+            --on-primary-fixed-variant: #004d73;
+            --secondary: #88b4cc;
+            --on-secondary: #001f2e;
+            --secondary-container: #1a3a4e;
+            --on-secondary-container: #c0d8e8;
+            --secondary-fixed: #c0d8e8;
+            --secondary-fixed-dim: #88b4cc;
+            --on-secondary-fixed: #0d1f2b;
+            --on-secondary-fixed-variant: #2a4a5e;
+            --tertiary: #c8a0f0;
+            --on-tertiary: #1a002e;
+            --tertiary-container: #3d2060;
+            --on-tertiary-container: #e8d0ff;
+            --tertiary-fixed: #e8d0ff;
+            --tertiary-fixed-dim: #c8a0f0;
+            --on-tertiary-fixed: #1a002e;
+            --on-tertiary-fixed-variant: #4d2a73;
+            --error: #ff6b6b;
+            --on-error: #1a0000;
+            --error-container: #3d1414;
+            --on-error-container: #ffb3b3;
+            --status-open: #4ade80;
+            --glass-bg: rgba(15, 21, 36, 0.6);
+            --glass-bg-elevated: rgba(15, 21, 36, 0.75);
+            --glass-border: rgba(125, 211, 252, 0.1);
+            --glass-border-elevated: rgba(125, 211, 252, 0.15);
+        }
+
         .glass-panel {
-            background: rgba(15, 21, 36, 0.6);
+            background: var(--glass-bg);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(125, 211, 252, 0.1);
+            border: 1px solid var(--glass-border);
         }
         .glass-panel-elevated {
-            background: rgba(15, 21, 36, 0.75);
+            background: var(--glass-bg-elevated);
             backdrop-filter: blur(24px);
-            border: 1px solid rgba(125, 211, 252, 0.15);
+            border: 1px solid var(--glass-border-elevated);
         }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -97,7 +263,7 @@
 <!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-lg border-b border-primary/10 shadow-[0_0_30px_rgba(125,211,252,0.05)]">
 <nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
-<a class="text-xl font-headline font-semibold text-primary dark:text-primary-fixed-dim" href="index.html">Farmacia Illimani</a>
+<a class="text-xl font-headline font-semibold text-primary" href="index.html">Farmacia Illimani</a>
 <div class="hidden md:flex items-center gap-8">
 <a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="servicios.html">Servicios</a>
 <a class="font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="catalogo.html">Categorías</a>
@@ -111,6 +277,7 @@
 <span class="material-symbols-outlined text-lg">chat</span>
                     Pedido WhatsApp
                 </a>
+<button aria-label="Cambiar tema" class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-primary/10 rounded-full transition-all duration-300" id="theme-toggle-btn">dark_mode</button>
 <button id="mobile-menu-btn" class="md:hidden material-symbols-outlined text-on-surface-variant p-2 hover:bg-primary/10 rounded-full transition-all duration-300" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">menu</button>
 </div>
 </nav>
@@ -389,6 +556,26 @@
             btn.textContent = 'menu';
             btn.setAttribute('aria-expanded', 'false');
         });
+    });
+})();
+</script>
+<script>
+(function () {
+    var btn = document.getElementById('theme-toggle-btn');
+    if (!btn) return;
+    function stored() { try { return localStorage.getItem('theme'); } catch (e) { return null; } }
+    function prefersDark() { return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; }
+    function current() { return stored() || (prefersDark() ? 'dark' : 'light'); }
+    function paintIcon(theme) {
+        btn.textContent = theme === 'dark' ? 'light_mode' : 'dark_mode';
+        btn.setAttribute('aria-label', theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+    }
+    paintIcon(current());
+    btn.addEventListener('click', function () {
+        var next = current() === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        paintIcon(next);
     });
 })();
 </script>
