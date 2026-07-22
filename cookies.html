@@ -130,7 +130,7 @@
             --error-container: #3d1414;
             --on-error-container: #ffb3b3;
             --status-open: #4ade80;
-            --glass-bg: rgba(15, 21, 36, 0.6);
+            --glass-bg: rgba(26, 36, 56, 0.6);
             --glass-bg-elevated: rgba(15, 21, 36, 0.75);
             --glass-border: rgba(125, 211, 252, 0.1);
             --glass-border-elevated: rgba(125, 211, 252, 0.15);
@@ -229,7 +229,7 @@
     </style>
 </head>
 <body class="min-h-screen flex flex-col selection:bg-primary/30">
-<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-lg border-b border-primary/10 shadow-[0_0_30px_rgba(125,211,252,0.05)]">
+<header class="fixed top-0 w-full z-50 bg-surface-container/60 backdrop-blur-lg">
 <nav class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
 <a class="text-xl font-headline font-semibold text-primary" href="index.html">Farmacia Illimani</a>
 <div class="hidden md:flex items-center gap-8">
@@ -241,7 +241,7 @@
 </div>
 <div class="flex items-center gap-4">
 <button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-primary/10 rounded-full transition-all duration-300">search</button>
-<a class="hidden md:flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 text-primary rounded-full font-semibold hover:bg-primary/20 transition-all active:scale-95" href="https://wa.me/#">
+<a class="hidden md:flex items-center gap-2 px-4 py-2 bg-primary text-on-primary rounded-full font-semibold shadow-lg shadow-primary/20 hover:brightness-110 transition-all active:scale-95" href="https://wa.me/#">
 <span class="material-symbols-outlined text-lg">chat</span>
                     Pedido WhatsApp
                 </a>
@@ -255,7 +255,7 @@
 <a class="block py-3 font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="horarios.html">Horarios</a>
 <a class="block py-3 font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="ubicacion.html">Ubicación</a>
 <a class="block py-3 font-headline font-semibold tracking-tight text-on-surface-variant hover:text-primary transition-colors" href="contacto.html">Contacto</a>
-<a class="flex items-center justify-center gap-2 px-4 py-3 mt-2 bg-primary/10 border border-primary/20 text-primary rounded-full font-semibold hover:bg-primary/20 transition-all active:scale-95" href="https://wa.me/#">
+<a class="flex items-center justify-center gap-2 px-4 py-3 mt-2 bg-primary text-on-primary rounded-full font-semibold shadow-lg shadow-primary/20 hover:brightness-110 transition-all active:scale-95" href="https://wa.me/#">
 <span class="material-symbols-outlined text-lg">chat</span>
                     Pedido WhatsApp
                 </a>
@@ -393,7 +393,7 @@
 </div>
 </main>
 <!-- Footer -->
-<footer class="w-full rounded-t-xl bg-surface-container-low/80 backdrop-blur-xl border-t border-primary/10 mt-20">
+<footer class="w-full rounded-t-xl bg-surface-container-low/80 backdrop-blur-xl mt-20">
 <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
 <div class="flex flex-col gap-6 max-w-sm">
 <a class="text-2xl font-headline font-bold text-primary tracking-tight" href="index.html">Farmacia Illimani</a>
@@ -429,7 +429,7 @@
 </div>
 </div>
 <div class="max-w-7xl mx-auto px-6 pb-8">
-<div class="border-t border-primary/10 pt-6 text-center md:text-left">
+<div class="border-t border-outline-variant/30 pt-6 text-center md:text-left">
 <p class="text-sm text-on-surface-variant opacity-60">© 2024 Farmacia Illimani. Sopocachi, La Paz. Todos los derechos reservados.</p>
 </div>
 </div>
